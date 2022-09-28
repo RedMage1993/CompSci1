@@ -1,0 +1,86 @@
+Fritz Ammon, Section #1008, Exercise #5
+
+-bash-4.1$ mkdir lab05dir
+-bash-4.1$ mv myconverttemp.cpp lab05dir
+-bash-4.1$ mv mycent2fahr.cpp lab05dir
+-bash-4.1$ cd lab05dir
+-bash-4.1$ ls
+mycent2fahr.cpp  myconverttemp.cpp
+-bash-4.1$ cd ..
+-bash-4.1$ ls
+a.out     lab03questions.txt  lab04questions      lab05dir  projects
+homework  lab03results        lab04questions.txt  labs
+-bash-4.1$ pwd
+/home/ammonf
+-bash-4.1$ cd lab05dir
+-bash-4.1$ mkdir lab05subdir
+-bash-4.1$ ls *.cpp
+mycent2fahr.cpp  myconverttemp.cpp
+-bash-4.1$ cat *.cpp
+// The following program converts a selected Centigrade
+// temperature to its Fahrenheit equivalent.
+// Input:  program will prompt for a Centigrade temperature
+//         to be converted
+// Output: the input temperature along with its Fahrenheit
+//         equivalent will be displayed with appropriate
+//         labels
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  double fahr; // Fahrenheit temperature result
+  double cent; // Centigrade temperature to be converted
+
+  cout << "Please enter a Centigrade temperature for conversion." << endl;
+  cin >> cent;
+  fahr = (9.0/5.0)*cent + 32;
+  cout << cent << " degrees Centigrade = " << fahr <<  " degrees Fahrenheit" <<
+        endl;
+  return 0;
+}
+////////////////////////
+// Fritz Ammon
+// Section #1008
+// Lab Exercise #2
+// The following program converts a selected range of Fahrenheit
+// temperatures to their Centigrade equivalents.
+// Input:  Fahrenheit temperatures to be converted (50 - 60)
+// Output: a table of values representing the Fahrenheit temperatures and
+//         their Centigrade equivalents
+//         Centigrade temperatures will be presented with 2 digits to the
+//         right of the decimal.
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  int fahr; // Fahrenheit temperature to be converted
+  float cent; // resulting Centigrade temperature
+
+  cout << fixed << showpoint << setprecision(2);
+  cout << "Fahrenheit   Centigrade" << endl;
+  for (fahr = 50; fahr <= 60; fahr++)
+    {
+      cent = (5.0/9.0)*(fahr - 32.0);
+      cout << setw(5) << fahr << setw(15) << cent << endl;
+    }
+  return 0;
+}
+//////////////////////////
+-bash-4.1$ cd lab05subdir
+-bash-4.1$ pwd
+/home/ammonf/lab05dir/lab05subdir
+-bash-4.1$ cd
+-bash-4.1$ pwd
+/home/ammonf
+-bash-4.1$ cd lab05dir/lab05subdir
+-bash-4.1$ pwd
+/home/ammonf/lab05dir/lab05subdir
+-bash-4.1$ cd ..
+-bash-4.1$ pwd
+/home/ammonf/lab05dir
+-bash-4.1$ 

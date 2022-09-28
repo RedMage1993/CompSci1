@@ -1,0 +1,26 @@
+Fritz Ammon
+Section #1001
+Assignment #3
+
+Problem Summary
+Design an interactive program to read 6 integer values representing a, b, c, d, e, and f, respectively.
+The program should compute the values of x and y using Cramer's rule. As output it should display the equations being solved and the solutions for x and y, appropriately labeled.
+
+Required Variables:
+(int) a, b, c, d, e, f
+(double) x, y
+
+ALGORITHM:
+print name, section #, and assignment #
+
+prompt for and read a, b, c for the first equation
+prompt for and read d, e, f for the second equation
+
+	// compute x and y using Cramer's rule
+	x = (c * e - f * b) / (a * e - d * b);
+	y = (a * f - d * c) / (a * e - d * b);
+
+print the original equations after substituting a, b, c, d, e, and f
+print the computed values of x and y with labels
+
+
